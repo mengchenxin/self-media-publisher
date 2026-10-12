@@ -75,20 +75,17 @@ python scripts/render_card.py --list-themes      # 查看卡片主题
 
 ## 安装
 
-把两个目录放进 WorkBuddy 的 skill 目录即可：
+把两个 skill 目录放进 WorkBuddy 的 skill 目录即可：
 
 ```bash
-git clone https://github.com/<你的用户名>/self-media-publisher.git
+git clone https://github.com/mengchenxin/self-media-publisher.git
+cd self-media-publisher
 
-# 用户级（所有项目可用）
-cp -r self-media-publisher/self-media-publisher \
-      self-media-publisher/agent-browser-login-setup \
-      ~/.workbuddy/skills/
+# 用户级安装（所有项目可用）
+cp -r self-media-publisher agent-browser-login-setup ~/.workbuddy/skills/
 
-# 或项目级（仅当前仓库共享）
-cp -r self-media-publisher/self-media-publisher \
-      self-media-publisher/agent-browser-login-setup \
-      <你的项目>/.workbuddy/skills/
+# 或项目级安装（仅当前仓库共享）
+cp -r self-media-publisher agent-browser-login-setup <你的项目>/.workbuddy/skills/
 ```
 
 ## 依赖
