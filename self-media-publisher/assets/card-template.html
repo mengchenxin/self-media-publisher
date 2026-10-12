@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+  小红书首图卡片模板（3:4，1080×1440）
+
+  由 scripts/render_card.py 填充占位符后生成成品 HTML，再用浏览器截图。
+  直接改这个文件的样式即可调整视觉，不必改脚本。
+
+  占位符共七个，分别对应底色、前景色、强调色、字号、小标签、主标题、署名。
+  （此处不写出字面量，否则脚本会把注释里的占位符一并替换掉。）
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>card</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: {{BG}};
+    /* 必须裁剪：视口与卡片同为 1080×1440，一旦出现滚动条就会互相挤压，
+       把底部署名挤出可视区。 */
+    overflow: hidden;
+  }
+  .card {
+    width: 1080px;
+    height: 1440px;
+    box-sizing: border-box;
+    padding: 112px 96px 96px;
+    background: {{BG}};
+    color: {{FG}};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB",
+                 "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .bar {
+    width: 120px;
+    height: 14px;
+    border-radius: 7px;
+    background: {{ACCENT}};
+  }
+  .kicker {
+    margin-top: 64px;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: {{ACCENT}};
+  }
+  .title {
+    margin-top: 30px;
+    font-size: {{SIZE}}px;
+    font-weight: 900;
+    line-height: 1.24;
+    letter-spacing: -1px;
+    word-break: break-word;
+  }
+  .footer {
+    font-size: 38px;
+    font-weight: 500;
+    opacity: 0.62;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="bar"></div>
+      <div class="kicker">{{KICKER}}</div>
+      <div class="title">{{TITLE}}</div>
+    </div>
+    <div class="footer">{{FOOTER}}</div>
+  </div>
+</body>
+</html>

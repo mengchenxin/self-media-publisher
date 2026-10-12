@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行产物：每个账号的实际发布数据不应进仓库
+*-log.csv
+auth-*.json
+
+# 生成的文章与配图（由 skill 在用户自己的输出目录产出）
+master.md
+wechat.md
+zhihu.md
+toutiao.md
+xiaohongshu.md
+weibo.md
+xhs-card.html
+images/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
